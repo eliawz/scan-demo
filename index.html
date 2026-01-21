@@ -40,7 +40,7 @@
 
 <script>
   // ✅ Put your n8n PRODUCTION webhook URL here (the one that doesn't change)
-  const N8N_WEBHOOK_URL = "https://elia111.app.n8n.cloud/webhook/scan";
+  const N8N_WEBHOOK_URL = "https://elia111.app.n8n.cloud/webhook-test/scan";
 
   const form = document.getElementById("scanForm");
   const btn = document.getElementById("btn");
@@ -93,7 +93,7 @@
     const timer = fakeProgressFast();
 
     try {
-      const res = await fetch("https://elia111.app.n8n.cloud/webhook/scan", {
+      const res = await fetch("https://elia111.app.n8n.cloud/webhook-test/scan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
